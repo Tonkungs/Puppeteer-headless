@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    chrome:
+        ports:
+            - '3000:3000'
+        environment:
+            - DEBUG=browserless/chrome
+            - MAX_CONCURRENT_SESSIONS=10
+        container_name: browserless
+        restart: always
+        image: 'browserless/chrome:latest'
